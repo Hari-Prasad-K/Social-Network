@@ -8,8 +8,9 @@
     "npm": "6.x"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && NPM_CONFIG_PRODUCTION=false npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd .. && cd client && npm install && npm run build"
   },
   "author": "Hari-Prasad-K",
   "license": "ISC",

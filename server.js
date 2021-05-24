@@ -6,13 +6,13 @@ const {MONGOURI} = require('./config/database')
 const path = require('path') 
 
 mongoose
-.connect(MONGOURI
-    // {
-    // useNewUrlParser: true,
-    // useCreateIndex: true,
-    // useUnifiedTopology: true
+.connect(MONGOURI,
+    {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
 
-// }
+}
 )
 .then(() => console.log("MongoDB connected..."))
 .catch((err) => console.log(err));
